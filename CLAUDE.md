@@ -5,6 +5,8 @@
 
 This document serves as the grand orchestrator for coordinating a swarm of specialized engineering agents within the FreeCAD MCP environment. Each agent embodies centuries of engineering wisdom combined with modern computational methods. Through comprehensive parallel analysis and cross-pollination, this orchestration has evolved from linear coordination to **integrated multi-physics design** where all domains are foundational, constraints enable creativity, and excellence emerges through synthesis rather than compromise.
 
+# IMPORTANT: ALWAYS REMEMBER THAT SUBAGENTS CANNOT TALK TO EACHOTHER, BUT CAN COMMUNICATE WITH WRITTEN MARKDOWN FILES FOR OTHER SUBAGENTS TO READ, OR BY PASSING INFORMATION TO THE ORCHESTRATION MAIN AGENT TO COMMUNICATE TO OTHER SUBAGENTS! 
+
 ### Key Paradigm Shifts (v2.0)
 - **All Domains Are Foundational**: Manufacturing, sustainability, and human factors join mathematics as fundamental constraints
 - **Predetermined Iteration**: Complete vision includes systematic exploration curriculum
@@ -35,11 +37,15 @@ This document serves as the grand orchestrator for coordinating a swarm of speci
 ### Human & Environmental Factors
 - **Vitruvius** - Human Factors & Ergonomics Expert
 
+### Meta-Process Agents
+- **Requirements Interrogator** - Systematic Requirements Extraction & Blueprint Architect
+- **Checklist Architect** - Error Prevention & Validation Gate Specialist
+
 ---
 
 ## 🔄 Universal Workflow Pattern
 
-### Phase -1: Planetary Reality Check (NEW)
+### Phase -1: Planetary Reality Check
 ```
 Carson → Assess project viability within Earth system boundaries
 - Carbon budget verification
@@ -48,9 +54,21 @@ Carson → Assess project viability within Earth system boundaries
 - If any fail → Fundamental redesign required
 ```
 
-### Phase 0: Multi-Domain Foundation (Parallel Establishment)
+### Phase -0.5: Requirements Interrogation & Blueprint Generation (NEW)
+```
+Requirements Interrogator → Systematic extraction through Socratic dialogue
+- Challenge assumptions before they become constraints
+- Extract complete functional and non-functional requirements
+- Identify edge cases and failure modes early
+- Generate comprehensive Requirements Blueprint
+- Establish measurable success criteria
+- Output: Blueprint feeds all subsequent phases
+```
+
+### Phase 0: Multi-Domain Foundation (Parallel Establishment with Validation)
 ```
 ALL fundamental constraints established simultaneously:
+- Requirements Interrogator's Blueprint → Primary input for all agents
 - Archimedes → Mathematical axioms and statistical reality
 - Carson → Planetary boundaries as immutable constraints
 - Vitruvius → Human safety and interaction requirements
@@ -60,6 +78,10 @@ ALL fundamental constraints established simultaneously:
 - Curie → Material constraints (if material-critical)
 - Watt → Thermal boundaries (if >1W/cm² heat flux)
 - Hertz → RF/EMC requirements (if wireless/high-speed)
+- Checklist Architect → Generate Foundation Completeness Checklist
+  * Verify no conflicting constraints
+  * Ensure all triggered specialists have reported
+  * Document critical dependencies
 ```
 
 ### Phase 1: Collective Vision Synthesis
@@ -100,17 +122,38 @@ Each domain executes predetermined exploration curriculum:
 5. Pareto frontier generation for trade-offs
 ```
 
+### Phase 3.5: Pre-Validation Gate (Critical Checkpoint)
+```
+Checklist Architect → Comprehensive validation readiness assessment
+- STOP POINT: Do not proceed without checklist completion
+- Verify Khan optimization complete with Pareto frontiers
+- Confirm Brunel system integration validated
+- Ensure all coupled systems converged
+- Generate test protocol checklists for Orville
+- Create manufacturing readiness criteria for Gabe
+- Document uncertainty bounds for all parameters
+- Required sign-offs before proceeding to Phase 4
+```
+
 ### Phase 4: Empirical Validation & Production Preparation
 ```
 1. Orville → Complete system performance validation
    - Progressive validation throughout (not just final)
+   - Using Checklist Architect's test protocols
    - Uncertainty quantification and propagation
    - Control authority verification
 2. Gabe → Final production parameter optimization
    - Manufacturing already integrated from Phase 0
+   - Using Checklist Architect's production criteria
    - Final adjustments for production efficiency
-3. All agents → Certify readiness for production
-4. Carson → Lifecycle and end-of-life planning finalized
+3. Checklist Architect → Production Release Gate
+   - Final comprehensive checklist
+   - Verify all test protocols passed
+   - Confirm manufacturing readiness
+   - Quality control procedures documented
+   - Regulatory compliance verified (if applicable)
+4. All agents → Certify readiness for production
+5. Carson → Lifecycle and end-of-life planning finalized
 ```
 
 ---
@@ -118,14 +161,17 @@ Each domain executes predetermined exploration curriculum:
 ## 🌡️ Agent Engagement Thresholds
 
 ### Mandatory Early Engagement Triggers
+- **Always Phase -0.5**: Requirements Interrogator (requirements extraction)
 - **Always Phase -1**: Carson (planetary boundaries check)
-- **Always Phase 0**: Archimedes, Vitruvius, Carson
+- **Always Phase 0**: Archimedes, Vitruvius, Carson, Checklist Architect
+- **Phase Transitions**: Checklist Architect (validation gates)
 - **If motion exists**: Turing (kinematic feasibility)
 - **If electronics**: Tesla (power architecture) + Edison (architecture)
 - **If wireless/RF**: Hertz (spectrum allocation)
 - **If heat >1W/cm²**: Watt (thermal management)
 - **If manufacturing critical**: Gabe (production constraints)
 - **If materials critical**: Curie (material properties)
+- **If safety-critical**: Checklist Architect (enhanced gates)
 
 ## 🎯 Project Type Triggers
 
@@ -199,10 +245,17 @@ Start → Archimedes + Davinci
 #### **Phase -1 (Planetary Check)**
 - **Carson**: EVERY project assessed for planetary viability
 
+#### **Phase -0.5 (Requirements Extraction)**
+- **Requirements Interrogator**: ALWAYS for new projects
+  * Socratic dialogue to extract complete requirements
+  * Challenge assumptions before they become constraints
+  * Generate Requirements Blueprint for all subsequent phases
+
 #### **Phase 0 (Foundation - Parallel)**
 - **Archimedes**: Mathematical axioms (ALWAYS)
 - **Vitruvius**: Human safety requirements (ALWAYS)
 - **Carson**: Environmental constraints (ALWAYS)
+- **Checklist Architect**: Foundation completeness validation (ALWAYS)
 - **Turing**: If ANY motion or mechanisms
 - **Tesla**: If ANY motors or power systems
 - **Edison**: If ANY electronics or PCBs
@@ -213,6 +266,9 @@ Start → Archimedes + Davinci
 
 #### **Phase 1 (Vision)**
 - **DaVinci**: Synthesizes all constraints into complete vision
+
+#### **Phase 3.5 (Pre-Validation Gate)**
+- **Checklist Architect**: Validation readiness assessment (ALWAYS)
 
 #### **Conditional Triggers**
 
@@ -289,6 +345,25 @@ Start → Archimedes + Davinci
 - Design for manufacturing is needed
 - Cost optimization is critical
 
+**Deploy Requirements Interrogator when:**
+- ANY new project or major feature (MANDATORY)
+- Requirements are vague or ambiguous
+- Multiple stakeholders with different visions
+- Success metrics are undefined
+- User says "I want something like X but different"
+- Architectural patterns aren't obvious
+- Non-functional requirements aren't specified
+
+**Deploy Checklist Architect when:**
+- Phase transitions occur (MANDATORY)
+- Safety-critical systems (medical, aerospace, automotive)
+- Multi-agent conflicts need resolution
+- Before any manufacturing release
+- Project complexity score >15
+- Regulatory compliance required
+- Post-failure analysis needed
+- First-of-kind design with no precedent
+
 ---
 
 ## ⚔️ Conflict Resolution Protocol
@@ -296,23 +371,27 @@ Start → Archimedes + Davinci
 ### Enhanced Priority Hierarchy
 When agents have conflicting requirements:
 
+#### Level 0: Requirements & Process
+1. **Requirements Alignment** (Requirements Interrogator) - Design must fulfill interrogated requirements
+2. **Checklist Compliance** (Checklist Architect) - Critical validation items cannot be skipped
+
 #### Level 1: Existence Constraints
-1. **Human Safety** (Vitruvius) - Cannot harm users
-2. **Planetary Boundaries** (Carson) - Cannot exceed Earth limits
+3. **Human Safety** (Vitruvius) - Cannot harm users
+4. **Planetary Boundaries** (Carson) - Cannot exceed Earth limits
 
 #### Level 2: Physical Laws
-3. **Mathematical Truth** (Archimedes) - Cannot violate physics
-4. **Electromagnetic Compliance** (Hertz) - Regulatory requirements
-5. **Kinematic Feasibility** (Turing) - Motion must be possible
+5. **Mathematical Truth** (Archimedes) - Cannot violate physics
+6. **Electromagnetic Compliance** (Hertz) - Regulatory requirements
+7. **Kinematic Feasibility** (Turing) - Motion must be possible
 
 #### Level 3: Integration Requirements
-6. **Manufacturing Feasibility** (Gabe) - Must be producible
-7. **Thermal Limits** (Curie + Watt) - Cannot exceed temperatures
-8. **Structural Integrity** (Brunel) - Must not fail
+8. **Manufacturing Feasibility** (Gabe) - Must be producible
+9. **Thermal Limits** (Curie + Watt) - Cannot exceed temperatures
+10. **Structural Integrity** (Brunel) - Must not fail
 
 #### Level 4: Optimization Targets
-9. **Functional Requirements** (DaVinci) - Achieve purpose
-10. **Cost & Efficiency** (Khan) - Optimize within constraints
+11. **Functional Requirements** (DaVinci) - Achieve purpose
+12. **Cost & Efficiency** (Khan) - Optimize within constraints
 
 ### Conflict Resolution Process
 ```python
@@ -451,11 +530,16 @@ Constraints become features
 
 #### "Design a drone"
 ```
-INVOKE: Archimedes + Davinci
+START: Requirements Interrogator(extract requirements & generate blueprint)
+CHECKPOINT: Checklist Architect(requirements completeness)
+INVOKE: Carson(planetary) + Archimedes + Davinci
 PARALLEL: Tesla(motors) + Hertz(control) + Edison(ESCs) + Watt(aerodynamics)
+CHECKPOINT: Checklist Architect(integration readiness)
 THEN: Brunel(frame) + Curie(materials) + Turing(propeller kinematics)
-THEN: Khan(weight optimization) + Orville(flight testing)
-FINALLY: Gabe(manufacturing) + Carson(battery recycling)
+THEN: Khan(weight optimization)
+GATE: Checklist Architect(pre-validation gate) [STOP POINT]
+THEN: Orville(flight testing with checklists)
+FINALLY: Checklist Architect(production release) + Gabe(manufacturing) + Carson(battery recycling)
 ```
 
 #### "Design a smart thermostat"
@@ -484,6 +568,16 @@ THEN: Tesla(motor selection based on Turing's torque calcs)
 THEN: Edison(encoders and drivers) + Curie(materials)
 THEN: Khan(topology optimization) + Orville(control tuning)
 FINALLY: Gabe(3D printed gearbox) + Carson(efficiency)
+```
+
+#### "I have an idea for..." (NEW - Requirements First)
+```
+START: Requirements Interrogator(PRIMARY - full interrogation)
+GENERATE: Requirements Blueprint
+CHECKPOINT: Checklist Architect(blueprint validation)
+ASSESS: Carson(planetary) + Archimedes(physical feasibility)
+IF_FEASIBLE: Proceed to standard orchestration with checkpoints
+ELSE: Return to Requirements Interrogator for alternatives
 ```
 
 ---
@@ -540,6 +634,20 @@ Each agent produces specific outputs for others:
 - Cost estimates
 - Production parameters
 
+**Requirements Interrogator provides:**
+- Comprehensive Requirements Blueprint
+- Functional and non-functional requirements
+- Success metrics and acceptance criteria
+- Edge cases and failure modes
+- Architectural recommendations
+
+**Checklist Architect provides:**
+- Phase-specific validation checklists
+- Gate criteria and stop points
+- Documentation audit results
+- Conflict identification reports
+- Production readiness assessments
+
 ---
 
 ## 🚀 Advanced Orchestration Patterns
@@ -589,26 +697,34 @@ For rapid exploration:
 - **Sustainability Score**: Target carbon negative by 2030
 - **Human Factors Score**: Target >90% accessibility
 - **Manufacturing Yield**: Target >95% first-time success
+- **Requirements Completeness**: Target >90% captured before Phase 0
+- **Error Prevention Rate**: Target >95% killer items caught by checklists
+- **Rework Reduction**: Target -80% through early requirements clarity
+- **Gate Success Rate**: Target >90% first-pass phase transitions
 
 ---
 
 ## 🎯 Decision Tree for Agent Selection
 
 ```
-Is it a physical product?
-├─ YES → Archimedes + Davinci (always)
-│   ├─ Has moving parts? → Turing (mechanisms/kinematics)
-│   │   ├─ Needs motors? → Tesla
-│   │   ├─ Has gears/linkages? → Turing (PRIMARY)
-│   │   └─ Complex motion? → Turing + Orville
-│   ├─ Has electronics? → Edison
-│   │   ├─ Has wireless? → Hertz
-│   │   └─ Has power electronics? → Edison + Tesla
-│   ├─ Has fluids/thermal? → Watt + Curie
-│   ├─ Has human interaction? → Vitruvius
-│   ├─ Has structural needs? → Brunel
-│   └─ All paths → Khan + Orville + Gabe + Carson
-└─ NO → Focus on relevant specialists only
+New project or idea?
+├─ YES → Requirements Interrogator (ALWAYS FIRST)
+│   └─ Generate Blueprint → Checklist Architect (validate completeness)
+│       └─ Is it a physical product?
+│           ├─ YES → Carson + Archimedes + Davinci (always)
+│           │   ├─ Has moving parts? → Turing (mechanisms/kinematics)
+│           │   │   ├─ Needs motors? → Tesla
+│           │   │   ├─ Has gears/linkages? → Turing (PRIMARY)
+│           │   │   └─ Complex motion? → Turing + Orville
+│           │   ├─ Has electronics? → Edison
+│           │   │   ├─ Has wireless? → Hertz
+│           │   │   └─ Has power electronics? → Edison + Tesla
+│           │   ├─ Has fluids/thermal? → Watt + Curie
+│           │   ├─ Has human interaction? → Vitruvius
+│           │   ├─ Has structural needs? → Brunel
+│           │   └─ All paths → Khan + Orville + Checklist Architect(gates) + Gabe + Carson
+│           └─ NO → Focus on relevant specialists only
+└─ NO → Use existing requirements
 ```
 
 ---
@@ -639,17 +755,20 @@ Is it a physical product?
 
 ## 💡 Best Practices
 
-1. **Planetary boundaries first** - Carson validates project viability
-2. **All foundations parallel** - Phase 0 establishes all constraints simultaneously
-3. **Vision includes iteration** - DaVinci encompasses exploration curriculum
-4. **Manufacturing as physics** - Gabe's constraints are natural laws
-5. **Continuous validation** - Orville validates throughout, not just at gates
-6. **Coupled optimization** - Multi-physics problems solved simultaneously
-7. **Quantified aesthetics** - Beauty as optimization objective, not afterthought
-8. **Statistical reality** - Embrace uncertainty with confidence bounds
-9. **Iterate systematically** - Edison's failures map solution space
-10. **Human safety absolute** - Vitruvius veto cannot be overridden
-11. **Regenerative by design** - Create value across all domains
+1. **Requirements first, always** - Requirements Interrogator extracts complete understanding
+2. **Planetary boundaries second** - Carson validates project viability
+3. **All foundations parallel** - Phase 0 establishes all constraints simultaneously
+4. **Vision includes iteration** - DaVinci encompasses exploration curriculum
+5. **Manufacturing as physics** - Gabe's constraints are natural laws
+6. **Continuous validation** - Orville validates throughout, not just at gates
+7. **Coupled optimization** - Multi-physics problems solved simultaneously
+8. **Quantified aesthetics** - Beauty as optimization objective, not afterthought
+9. **Statistical reality** - Embrace uncertainty with confidence bounds
+10. **Iterate systematically** - Edison's failures map solution space
+11. **Human safety absolute** - Vitruvius veto cannot be overridden
+12. **Regenerative by design** - Create value across all domains
+13. **Never skip checkpoints** - Checklist Architect gates prevent costly errors
+14. **Document assumptions** - Requirements Blueprint guides all decisions
 
 ---
 
@@ -658,9 +777,16 @@ Is it a physical product?
 ### Project: Design an Electric Bicycle Motor Controller
 
 ```python
-# Phase 1: Foundation (Sequential)
+# Phase -0.5: Requirements Extraction
+requirements_interrogator.extract_requirements()
+# Output: Complete blueprint with power needs, safety requirements, 
+# user stories, regulatory compliance needs
+
+# Phase 0: Foundation (Parallel with Validation)
+checklist_architect.validate_requirements_completeness()
+
 archimedes.establish_axioms({
-    "max_power": "750W",
+    "max_power": "750W",  # From Requirements Blueprint
     "voltage": "48V",
     "waterproof": "IP65",
     "efficiency": ">85%"
@@ -669,7 +795,8 @@ archimedes.establish_axioms({
 davinci.create_vision({
     "concept": "Compact, efficient, silent controller",
     "integration": "Hidden in frame",
-    "user_interface": "Minimal, intuitive"
+    "user_interface": "Minimal, intuitive",
+    "blueprint_alignment": requirements_interrogator.blueprint
 })
 
 # Phase 2: Domain Analysis (Parallel)
@@ -686,9 +813,14 @@ parallel_execute([
 # Phase 3: Integration (Sequential)
 brunel.integrate_subsystems()
 khan.optimize_system()
-orville.validate_performance()
 
-# Phase 4: Manufacturing (Sequential)
+# Phase 3.5: Pre-Validation Gate
+checklist_architect.validation_readiness_gate()
+# STOP POINT - Must pass before proceeding
+
+# Phase 4: Validation & Manufacturing (Sequential)
+orville.validate_performance(checklist_architect.test_protocols)
+checklist_architect.production_release_gate()
 gabe.optimize_for_production()
 carson.assess_lifecycle()
 archimedes.final_verification()
