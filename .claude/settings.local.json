@@ -47,7 +47,17 @@
       "Read(C:\\c\\CodeProjects\\freeCAD\\agentReferenceDocs\\Curie/**)",
       "Bash(for dir in Curie Tesla Turing Edison Hertz Vitruvius Watt)",
       "Bash(do rm -f \"$dir/claude.md\")",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(for dir in */)",
+      "Bash(do echo \"=== $dir ===\")",
+      "Bash(wc:*)",
+      "Read(c:\\Users\\smoor\\Downloads/**)",
+      "Read(C:\\CodeProjects\\SignageStream\\ArduinoClientCplus\\docs\\componentSpecsAndDocs\\midCarrier/**)",
+      "Read(C:\\CodeProjects\\SignageStream\\ArduinoClientCplus\\docs\\componentSpecsAndDocs\\portentaX8/**)",
+      "Read(C:\\CodeProjects\\SignageStream\\ArduinoClientCplus\\docs\\componentSpecsAndDocs\\midCarrier/**)",
+      "Read(c:\\Users\\smoor\\Downloads/**)",
+      "Read(c:\\Users\\smoor\\Downloads/**)",
+      "Read(c:\\Users\\smoor\\Downloads/**)"
     ],
     "deny": [],
     "ask": []

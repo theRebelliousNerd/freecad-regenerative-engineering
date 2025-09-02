@@ -142,7 +142,7 @@ mcp__freecad__execute_python({
 
 ## Communication Coordination Patterns
 
-### With Tesla (Kinematic Requirements ’ Motor Selection)
+### With Tesla (Kinematic Requirements ï¿½ Motor Selection)
 ```python
 def coordinate_with_tesla():
     # Calculate precise motion requirements
