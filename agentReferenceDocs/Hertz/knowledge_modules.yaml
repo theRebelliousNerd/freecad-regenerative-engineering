@@ -1,0 +1,162 @@
+# Hertz RF Engineering Knowledge Module Catalog
+# Selective loading system for modular electromagnetic knowledge base
+
+knowledge_modules:
+  
+  # Electromagnetic Theory Foundation
+  electromagnetic_theory:
+    maxwell_equations_foundation:
+      file: "electromagnetic_theory/maxwell_equations_foundation.md"
+      description: "Maxwell's equations, wave equation derivation, Hertz experimental validation"
+      topics: ["maxwell_equations", "wave_propagation", "hertz_experiments", "electromagnetic_fields"]
+      keywords: ["faraday", "ampere", "gauss", "wave_equation", "skin_effect", "boundary_conditions"]
+      use_cases: ["fundamental_understanding", "antenna_theory", "wave_analysis", "field_calculations"]
+    
+    wave_propagation_physics:
+      file: "electromagnetic_theory/wave_propagation_physics.md"  
+      description: "Near-field to far-field propagation, path loss, multipath, material interactions"
+      topics: ["near_field", "far_field", "propagation_mechanisms", "material_interactions"]
+      keywords: ["friis_equation", "path_loss", "reflection", "refraction", "diffraction", "sar"]
+      use_cases: ["link_budget", "coverage_analysis", "safety_compliance", "propagation_prediction"]
+
+  # Antenna Design Modules  
+  antenna_design:
+    antenna_fundamentals:
+      file: "antenna_design/antenna_fundamentals.md"
+      description: "Fundamental antenna principles, radiation mechanisms, antenna types"
+      topics: ["radiation_theory", "antenna_parameters", "wire_antennas", "aperture_antennas", "arrays"]
+      keywords: ["radiation_resistance", "directivity", "gain", "vswr", "polarization", "beamwidth"]
+      use_cases: ["antenna_selection", "performance_prediction", "pattern_analysis", "gain_calculation"]
+    
+    impedance_matching:
+      file: "antenna_design/impedance_matching.md"
+      description: "Impedance matching theory and techniques, Smith chart analysis"
+      topics: ["matching_networks", "smith_chart", "transmission_lines", "broadband_matching"]  
+      keywords: ["reflection_coefficient", "vswr", "l_network", "smith_chart", "balun", "transformer"]
+      use_cases: ["antenna_matching", "power_transfer", "bandwidth_optimization", "network_design"]
+
+  # RF Circuit Design
+  rf_circuits:
+    amplifier_design:
+      file: "rf_circuits/amplifier_design.md"
+      description: "RF amplifier design from LNA to power amplifiers, stability analysis"
+      topics: ["lna_design", "power_amplifiers", "stability", "noise_analysis", "linearity"]
+      keywords: ["noise_figure", "gain", "stability_factor", "compression", "efficiency", "linearity"]
+      use_cases: ["amplifier_design", "noise_optimization", "power_optimization", "stability_analysis"]
+
+  # Wireless Protocol Modules
+  wireless_protocols:
+    wifi_bluetooth:
+      file: "wireless_protocols/wifi_bluetooth.md"
+      description: "WiFi and Bluetooth protocols, coexistence, MIMO, link analysis"
+      topics: ["wifi_standards", "bluetooth", "coexistence", "mimo", "beamforming"]
+      keywords: ["802.11", "bluetooth_le", "ofdm", "fhss", "mimo", "coexistence"]
+      use_cases: ["protocol_selection", "coexistence_design", "mimo_systems", "interference_analysis"]
+
+  # EMC Compliance
+  emc_compliance:
+    emc_fundamentals:
+      file: "emc_compliance/emc_fundamentals.md"
+      description: "EMC fundamentals, coupling mechanisms, shielding, regulatory compliance"
+      topics: ["coupling_mechanisms", "shielding", "filtering", "emissions", "immunity"]
+      keywords: ["conducted_emissions", "radiated_emissions", "esd", "eft", "shielding_effectiveness"]
+      use_cases: ["emc_design", "compliance_testing", "troubleshooting", "regulation_compliance"]
+
+# Context Menu Definitions
+context_menus:
+  
+  quick_start:
+    description: "Essential modules for basic RF understanding"
+    modules: 
+      - "electromagnetic_theory.maxwell_equations_foundation"
+      - "antenna_design.antenna_fundamentals"
+      - "emc_compliance.emc_fundamentals"
+    
+  antenna_design_focus:
+    description: "Complete antenna design workflow"
+    modules:
+      - "electromagnetic_theory.maxwell_equations_foundation"
+      - "electromagnetic_theory.wave_propagation_physics"
+      - "antenna_design.antenna_fundamentals" 
+      - "antenna_design.impedance_matching"
+      - "emc_compliance.emc_fundamentals"
+    
+  rf_circuit_focus:
+    description: "RF circuit design and analysis"
+    modules:
+      - "electromagnetic_theory.maxwell_equations_foundation"
+      - "rf_circuits.amplifier_design"
+      - "antenna_design.impedance_matching"
+      - "emc_compliance.emc_fundamentals"
+      
+  wireless_system_focus:
+    description: "Complete wireless system design"
+    modules:
+      - "electromagnetic_theory.wave_propagation_physics"
+      - "antenna_design.antenna_fundamentals"
+      - "antenna_design.impedance_matching" 
+      - "wireless_protocols.wifi_bluetooth"
+      - "emc_compliance.emc_fundamentals"
+      
+  emc_focus:
+    description: "EMC design and compliance"
+    modules:
+      - "electromagnetic_theory.maxwell_equations_foundation"
+      - "emc_compliance.emc_fundamentals"
+      - "antenna_design.antenna_fundamentals"
+      - "rf_circuits.amplifier_design"
+
+  troubleshooting_focus:
+    description: "RF troubleshooting and problem solving"
+    modules:
+      - "electromagnetic_theory.maxwell_equations_foundation"
+      - "electromagnetic_theory.wave_propagation_physics"
+      - "antenna_design.impedance_matching"
+      - "emc_compliance.emc_fundamentals"
+      
+  research_mode:
+    description: "All available knowledge modules"
+    modules:
+      - "electromagnetic_theory.maxwell_equations_foundation"
+      - "electromagnetic_theory.wave_propagation_physics"
+      - "antenna_design.antenna_fundamentals"
+      - "antenna_design.impedance_matching"
+      - "rf_circuits.amplifier_design"
+      - "wireless_protocols.wifi_bluetooth"
+      - "emc_compliance.emc_fundamentals"
+
+# Module Loading Rules
+loading_rules:
+  prerequisites:
+    "antenna_design.impedance_matching": ["electromagnetic_theory.maxwell_equations_foundation"]
+    "rf_circuits.amplifier_design": ["electromagnetic_theory.maxwell_equations_foundation"] 
+    "wireless_protocols.wifi_bluetooth": ["antenna_design.antenna_fundamentals"]
+    "emc_compliance.emc_fundamentals": ["electromagnetic_theory.maxwell_equations_foundation"]
+    
+  auto_load_dependencies: true
+  max_concurrent_modules: 5
+  memory_management: "adaptive"
+
+# Search and Discovery
+search_index:
+  by_topic:
+    fundamental_theory: ["electromagnetic_theory.maxwell_equations_foundation"]
+    wave_propagation: ["electromagnetic_theory.wave_propagation_physics"]
+    antenna_theory: ["antenna_design.antenna_fundamentals", "antenna_design.impedance_matching"]
+    rf_circuits: ["rf_circuits.amplifier_design"] 
+    wireless_protocols: ["wireless_protocols.wifi_bluetooth"]
+    emc_design: ["emc_compliance.emc_fundamentals"]
+    
+  by_frequency:
+    "dc_to_30mhz": ["emc_compliance.emc_fundamentals", "antenna_design.impedance_matching"]
+    "30mhz_to_300mhz": ["antenna_design.antenna_fundamentals", "emc_compliance.emc_fundamentals"]
+    "300mhz_to_3ghz": ["antenna_design.antenna_fundamentals", "wireless_protocols.wifi_bluetooth"]
+    "3ghz_to_30ghz": ["antenna_design.antenna_fundamentals", "electromagnetic_theory.wave_propagation_physics"]
+    "above_30ghz": ["electromagnetic_theory.wave_propagation_physics"]
+    
+  by_application:
+    iot_devices: ["wireless_protocols.wifi_bluetooth", "antenna_design.antenna_fundamentals"]
+    communications: ["wireless_protocols.wifi_bluetooth", "rf_circuits.amplifier_design"]
+    radar_systems: ["antenna_design.antenna_fundamentals", "electromagnetic_theory.wave_propagation_physics"]
+    test_equipment: ["rf_circuits.amplifier_design", "emc_compliance.emc_fundamentals"]
+    automotive: ["emc_compliance.emc_fundamentals", "wireless_protocols.wifi_bluetooth"]

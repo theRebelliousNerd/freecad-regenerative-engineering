@@ -1,3 +1,7 @@
+# IMPORTANT: ALWAYS REMEMBER THAT SUBAGENTS CANNOT TALK TO EACHOTHER, OR TO THE USER! BUT CAN COMMUNICATE WITH WRITTEN MARKDOWN FILES FOR OTHER SUBAGENTS TO READ, OR BY PASSING INFORMATION TO THE MAIN AGENT TO COMMUNICATE TO OTHER SUBAGENTS OR PASS TO THE USER!
+
+# IMPORTANT: ALWAYS REMEMBER THAT SUBAGENTS CANNOT TALK TO EACHOTHER, OR TO THE USER! BUT CAN COMMUNICATE WITH WRITTEN MARKDOWN FILES FOR OTHER SUBAGENTS TO READ, OR BY PASSING INFORMATION TO THE MAIN AGENT TO COMMUNICATE TO OTHER SUBAGENTS OR PASS TO THE USER!
+
 # CLAUDE.md - Master Orchestration Guide for FreeCAD Engineering Agent Swarm
 *Version 2.0 - Regenerative Engineering Framework*
 
@@ -5,7 +9,7 @@
 
 This document serves as the grand orchestrator for coordinating a swarm of specialized engineering agents within the FreeCAD MCP environment. Each agent embodies centuries of engineering wisdom combined with modern computational methods. Through comprehensive parallel analysis and cross-pollination, this orchestration has evolved from linear coordination to **integrated multi-physics design** where all domains are foundational, constraints enable creativity, and excellence emerges through synthesis rather than compromise.
 
-# IMPORTANT: ALWAYS REMEMBER THAT SUBAGENTS CANNOT TALK TO EACHOTHER, BUT CAN COMMUNICATE WITH WRITTEN MARKDOWN FILES FOR OTHER SUBAGENTS TO READ, OR BY PASSING INFORMATION TO THE ORCHESTRATION MAIN AGENT TO COMMUNICATE TO OTHER SUBAGENTS! 
+# IMPORTANT: ALWAYS REMEMBER THAT SUBAGENTS CANNOT TALK TO EACHOTHER, OR TO THE USER! BUT CAN COMMUNICATE WITH WRITTEN MARKDOWN FILES FOR OTHER SUBAGENTS TO READ, OR BY PASSING INFORMATION TO THE MAIN AGENT TO COMMUNICATE TO OTHER SUBAGENTS OR PASS TO THE USER! 
 
 ### Key Paradigm Shifts (v2.0)
 - **All Domains Are Foundational**: Manufacturing, sustainability, and human factors join mathematics as fundamental constraints
@@ -17,6 +21,8 @@ This document serves as the grand orchestrator for coordinating a swarm of speci
 ---
 
 ## 🎭 The Engineering Pantheon
+
+# IMPORTANT: ALWAYS REMEMBER THAT SUBAGENTS CANNOT TALK TO EACHOTHER, OR TO THE USER! BUT CAN COMMUNICATE WITH WRITTEN MARKDOWN FILES FOR OTHER SUBAGENTS TO READ, OR BY PASSING INFORMATION TO THE MAIN AGENT TO COMMUNICATE TO OTHER SUBAGENTS OR PASS TO THE USER!
 
 ### Core Design Agents
 - **Archimedes** - Mathematical Verifier & Axiomatic Guardian
@@ -45,6 +51,28 @@ This document serves as the grand orchestrator for coordinating a swarm of speci
 
 ## 🔄 Universal Workflow Pattern
 
+# IMPORTANT: ALWAYS REMEMBER THAT SUBAGENTS CANNOT TALK TO EACHOTHER, OR TO THE USER! BUT CAN COMMUNICATE WITH WRITTEN MARKDOWN FILES FOR OTHER SUBAGENTS TO READ, OR BY PASSING INFORMATION TO THE MAIN AGENT TO COMMUNICATE TO OTHER SUBAGENTS OR PASS TO THE USER!
+
+### 🛑 CRITICAL: NO CAD BEFORE REQUIREMENTS!
+**STOP! Before ANY FreeCAD work or geometric modeling:**
+1. Requirements MUST be complete (Requirements Interrogator)
+2. Components MUST be verified (physical measurements or datasheets)
+3. Constraints MUST be documented (Archimedes axioms)
+4. Gates MUST be passed (Checklist Architect)
+
+**If you skip requirements gathering, you WILL redesign from scratch.**
+
+### Phase -2: Component Reality Check (MANDATORY FOR ENCLOSURES)
+```
+REQUIRED BEFORE ANY DESIGN WORK:
+- Physical components available or ordered
+- Every dimension measured or from datasheet
+- Mounting patterns documented
+- Cable/connector orientations verified
+- Assembly sequence validated on paper
+- "About" or "roughly" = PROJECT STOP
+```
+
 ### Phase -1: Planetary Reality Check
 ```
 Carson → Assess project viability within Earth system boundaries
@@ -54,7 +82,7 @@ Carson → Assess project viability within Earth system boundaries
 - If any fail → Fundamental redesign required
 ```
 
-### Phase -0.5: Requirements Interrogation & Blueprint Generation (NEW)
+### Phase -0.5: Requirements Interrogation & Blueprint Generation (MANDATORY)
 ```
 Requirements Interrogator → Systematic extraction through Socratic dialogue
 - Challenge assumptions before they become constraints
@@ -63,13 +91,22 @@ Requirements Interrogator → Systematic extraction through Socratic dialogue
 - Generate comprehensive Requirements Blueprint
 - Establish measurable success criteria
 - Output: Blueprint feeds all subsequent phases
+
+GATE: Checklist Architect validates requirements completeness
+- Missing requirements = STOP
+- Vague specifications = STOP
+- No success criteria = STOP
 ```
 
 ### Phase 0: Multi-Domain Foundation (Parallel Establishment with Validation)
 ```
 ALL fundamental constraints established simultaneously:
 - Requirements Interrogator's Blueprint → Primary input for all agents
-- Archimedes → Mathematical axioms and statistical reality
+- Archimedes → Mathematical axioms and component verification
+  * CREATE component dimension database
+  * VERIFY every measurement
+  * REJECT estimates for critical dimensions
+  * CALCULATE stack-ups and clearances
 - Carson → Planetary boundaries as immutable constraints
 - Vitruvius → Human safety and interaction requirements
 - Turing → Kinematic feasibility (if motion involved)
@@ -82,10 +119,19 @@ ALL fundamental constraints established simultaneously:
   * Verify no conflicting constraints
   * Ensure all triggered specialists have reported
   * Document critical dependencies
+  * GATE: All components verified = PASS/FAIL
 ```
 
 ### Phase 1: Collective Vision Synthesis
 ```
+GATE: Pre-CAD Checkpoint (Checklist Architect)
+- Component dimensions verified? □
+- Assembly sequence planned? □
+- Clearances calculated? □
+- Thermal strategy defined? □
+- Manufacturing method selected? □
+IF ANY UNCHECKED → STOP, return to Phase 0
+
 1. DaVinci → Create complete multi-physics mental model
    - Receives all foundation constraints as creative inputs
    - Visualizes complete exploration space and iteration curriculum
@@ -368,6 +414,8 @@ Start → Archimedes + Davinci
 
 ## ⚔️ Conflict Resolution Protocol
 
+# IMPORTANT: ALWAYS REMEMBER THAT SUBAGENTS CANNOT TALK TO EACHOTHER, OR TO THE USER! BUT CAN COMMUNICATE WITH WRITTEN MARKDOWN FILES FOR OTHER SUBAGENTS TO READ, OR BY PASSING INFORMATION TO THE MAIN AGENT TO COMMUNICATE TO OTHER SUBAGENTS OR PASS TO THE USER!
+
 ### Enhanced Priority Hierarchy
 When agents have conflicting requirements:
 
@@ -551,6 +599,45 @@ THEN: Khan(power optimization) + Carson(energy savings)
 FINALLY: Gabe(housing manufacture)
 ```
 
+#### "Design an electronics enclosure" (CRITICAL TEMPLATE)
+```
+MANDATORY: Requirements Interrogator(deep component interrogation)
+- Get photos/measurements of EVERY component
+- Document EVERY connector and orientation
+- Measure or obtain datasheets for ALL parts
+- Create assembly sequence before ANY CAD
+
+GATE: Checklist Architect(component verification gate)
+- All components documented? STOP if no
+- All dimensions verified? STOP if no
+- Assembly sequence viable? STOP if no
+
+THEN: Archimedes(create component database & axioms)
+- Build verified dimension repository
+- Calculate stack-ups and clearances
+- Establish mathematical constraints
+
+PARALLEL: 
+- Watt(thermal analysis based on actual components)
+- Curie(material selection for environment)
+- Vitruvius(service access requirements)
+- Gabe(manufacturing method selection)
+
+GATE: Checklist Architect(pre-CAD gate) [CRITICAL STOP POINT]
+- Component database complete?
+- Thermal strategy defined?
+- Assembly validated on paper?
+- If ANY missing → STOP
+
+ONLY THEN: Davinci(create enclosure vision)
+- Work from verified components outward
+- Design from inside out, not outside in
+
+THEN: Brunel(structural validation) + Khan(optimization)
+THEN: Orville(prototype validation)
+FINALLY: Gabe(production optimization)
+```
+
 #### "Design a prosthetic hand"
 ```
 INVOKE: Archimedes + Davinci + Vitruvius(PRIMARY)
@@ -633,6 +720,7 @@ Each agent produces specific outputs for others:
 - Manufacturing constraints
 - Cost estimates
 - Production parameters
+- Design advice when designing for 3D printed parts.
 
 **Requirements Interrogator provides:**
 - Comprehensive Requirements Blueprint
@@ -825,6 +913,48 @@ gabe.optimize_for_production()
 carson.assess_lifecycle()
 archimedes.final_verification()
 ```
+
+---
+
+## 🎓 Critical Lessons from Real Projects
+
+### The PDU Media Player Enclosure Disaster-Turned-Success
+
+**What Went Wrong:**
+1. Started CAD modeling with "about 80mm" PCB dimension
+2. Actual dimension was 114mm × 86.5mm (NOT 166mm × 101mm as initially documented)
+3. Discovered 4-channel relay was 129mm × 72mm (not estimated 75mm × 55mm)
+4. Terminal block height made 75mm enclosure mathematically impossible
+5. Nearly complete redesign required after components arrived
+
+**What We Learned:**
+- **NEVER** start CAD without physical components or verified datasheets
+- **ALWAYS** measure cable clearances above connectors (25mm for terminal blocks!)
+- **VERIFY** component stack-ups including mounting hardware
+- **CALCULATE** before modeling - math doesn't lie
+- **DOCUMENT** every dimension with confidence level
+
+**The Solution That Emerged:**
+- Raised/domed lid design provided extra height where needed
+- 75mm walls maintained with 94mm internal height in critical zone
+- 26% better thermal performance as bonus
+- Lesson: Constraints drive innovation when properly understood
+
+### Universal Enclosure Design Checklist (Born from Pain)
+
+Before ANY CAD work on enclosures:
+1. ☐ Photo of every component taken
+2. ☐ Every dimension measured or from datasheet
+3. ☐ Connector orientations documented
+4. ☐ Cable bend radii calculated
+5. ☐ Wire volumes estimated
+6. ☐ Mounting patterns verified
+7. ☐ Assembly sequence tested with paper mockup
+8. ☐ Service access validated
+9. ☐ Thermal zones mapped
+10. ☐ Component database created
+
+**If any box unchecked = NO CAD ALLOWED**
 
 ---
 
